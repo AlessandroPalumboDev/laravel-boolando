@@ -1,0 +1,74 @@
+@use "./variables";
+
+.position-relative {
+    position: relative;
+}
+
+.position-absolute {
+    position: absolute;
+}
+
+.img-prodotto {
+    width: variables.$full-width;
+    display: inline-block;
+}
+
+.cuore {
+    font-size: 40px;
+    padding: 0 10px;
+    top: 5px;
+    right: 5px;
+    background-color: white;
+    border: none;
+    display: none;
+}
+
+.prodotto:hover .cuore {
+    display: inline-block;
+
+    &:hover {
+        color: red;
+        display: inline-block;
+        cursor: pointer;
+    }
+}
+
+.img-prodotto-secondo {
+    width: variables.$full-width;
+    display: none;
+}
+
+.prodotto:hover .img-prodotto-secondo {
+    display: inline-block;
+}
+
+.prodotto:hover .img-prodotto {
+    display: none;
+}
+
+.etichette {
+    position: absolute;
+    bottom: 10%;
+}
+
+.percentuale-sconto {
+    background-color: red;
+    color: white;
+    padding: 5px 7px;
+    margin: 0 2px;
+}
+
+.sostenibilità {
+    background-color: green;
+    color: white;
+    padding: 5px 7px;
+    margin: 0 2px;
+}
+
+.prezzo-originale {
+    text-decoration: line-through;
+}
+
+.prezzo-scontato {
+    color: red;
+}

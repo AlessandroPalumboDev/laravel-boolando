@@ -1,0 +1,55 @@
+@use "./variables";
+
+.selezione {
+    margin: 10px;
+}
+
+.logo {
+    height: calc(variables.$full-height / 2);
+}
+
+// .img-piccole {
+//     width: variables.$img-piccole;
+//     height: variables.$img-piccole;
+//     filter: brightness(0) saturate(100%) invert(100%) sepia(3%) saturate(11%)
+//         hue-rotate(61deg) brightness(104%) contrast(100%);
+// }
+
+/* CLASSI DI LAYOUT */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.row-header {
+    width: variables.$full-width;
+}
+
+.col25 {
+    width: calc(variables.$full-width / 4);
+}
+
+.col50 {
+    width: calc(variables.$full-width / 2);
+
+    .logo {
+        width: 30%;
+    }
+}
+
+/* CLASSI DI UTILITY */
+.d-flex {
+    display: flex;
+}
+
+.a-items-center {
+    align-items: center;
+}
+
+.txt-a-right {
+    text-align: right;
+}
+
+.txt-a-center {
+    text-align: center;
+}

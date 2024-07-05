@@ -1,6 +1,63 @@
 /*resources/scss/app.scss*/
+@use "./variables";
+
 @import "~bootstrap/scss/bootstrap";
+@import "@fortawesome/fontawesome-free/css/fontawesome.css";
+@import "@fortawesome/fontawesome-free/css/regular.css";
+@import "@fortawesome/fontawesome-free/css/solid.css";
+@import "@fortawesome/fontawesome-free/css/brands.css";
+@import "./header";
+@import "./footer";
+@import "./card";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@mixin header-position {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+}
+
+@mixin footer-position {
+    position: fixed;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+}
 
 body {
-    background-color: white;
+    height: variables.$full-height; // non height: $full-height
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
+    li {
+        list-style: none;
+    }
+}
+
+header {
+    @include header-position();
+    width: variables.$full-width;
+    background-color: variables.$bg-orange;
+    padding: 10px 20px;
+}
+
+main {
+    margin: auto;
+    margin-top: 65px;
+    margin-bottom: 80px;
+}
+
+footer {
+    @include footer-position;
+    width: variables.$full-width;
+    padding: 20px;
+    background-color: variables.$bg-black;
 }
