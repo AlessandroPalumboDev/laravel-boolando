@@ -1,5 +1,10 @@
 @use "./variables";
 
+.col33 {
+    margin: 10px 5px;
+    width: calc(variables.$full-width / 3 - 20px);
+}
+
 .position-relative {
     position: relative;
 }

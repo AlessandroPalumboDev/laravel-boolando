@@ -1,5 +1,5 @@
 @extends('layouts.app')
 
 @section('main')
-ABOUT
+<h1>{{$title}}</h1>
 @endsection
