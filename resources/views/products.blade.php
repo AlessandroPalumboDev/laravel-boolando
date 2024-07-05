@@ -30,7 +30,7 @@
                     <span>{{$prodotto['brand']}}</span>
                     <h3>{{$prodotto['name']}}</h3>
                     <span class="prezzo-scontato" >{{$prodotto['price']}}&euro;</span>  
-                    <span class="prezzo-originale">{{$prodotto['price']}}</span>
+                    <span class="prezzo-originale">{{$prodotto['price']}}&euro;</span>
                 </div>
             </div>
         </div>

@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
 @section('main')
-<h1>{{$title}}</h1>
+<div class="col text-center">
+    <h1>{{$title}}</h1>
+</div>
 @endsection
