@@ -9,13 +9,24 @@
                 
             <div class="card">
                 <div class="prodotto position-relative">
-                    <img class="img-prodotto" src="{{ Vite::asset('resources/img/1.webp') }}" alt={{$prodotto['frontImage']}}>
-                    <img class="img-prodotto-secondo" src="{{ Vite::asset('resources/img/1b.webp') }}" alt={{$prodotto['backImage']}}>
+                    <img class="img-prodotto" src="{{ Vite::asset("resources/img/".$prodotto["frontImage"]) }}" alt={{$prodotto['frontImage']}}>
+                    <img class="img-prodotto-secondo" src="{{ Vite::asset("resources/img/".$prodotto["backImage"]) }}" alt={{$prodotto['backImage']}}>
                     <input class="cuore position-absolute" type="button" value="&hearts;">
-
-
+                    <div class="etichette">
+                        @foreach ($prodotto["badges"] as $badge)
+                            @if ($badge['type'] === 'tag')
+                                <span class='sostenibilità'>
+                                    {{ $badge['value'] }}
+                                </span>
+                            @elseif ($badge['type'] === 'discount')
+                                <span class='percentuale-sconto'>
+                                    {{ $badge['value'] }}
+                                </span>
+                            @endif
+                        @endforeach
+                    </div>
                 </div>
-                <div class="testo-prodotto">
+                <div class="testo-prodotto m-2">
                     <span>{{$prodotto['brand']}}</span>
                     <h3>{{$prodotto['name']}}</h3>
                     <span class="prezzo-scontato" >{{$prodotto['price']}}&euro;</span>  
