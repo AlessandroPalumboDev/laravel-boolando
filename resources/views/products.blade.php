@@ -1,5 +1,5 @@
 @extends('layouts.app')
 
 @section('main')
-HOMEPAGE
+PRODOTTI
 @endsection
